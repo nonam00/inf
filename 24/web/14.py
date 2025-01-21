@@ -1,0 +1,5 @@
+s = open().readline()
+s = s.replace('AB', 'X').replace("AC", 'X')
+s = s.replace('A', ' ').replace('B', ' ').replace('C', ' ')
+s = s.split(' ')
+print(max(len(item) for item in s))

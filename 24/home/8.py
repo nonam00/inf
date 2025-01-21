@@ -12,8 +12,9 @@ for item in s.split():
             if ps[0] == 'B': 
                 for j in range(i + 1, len(item)):
                     ps += item[j]
+                    if 'A' in ps or 'C' in ps or 'D' in ps:
+                        break
                     if ps[1] not in '-*' and ps[-1] not in '-*':
-                        if 'A' not in ps and 'C' not in ps and 'D' not in ps:
-                            if ps.count('B') == 1:
-                                mx = max(mx, len(ps))
+                        if ps.count('B') == 1:
+                            mx = max(mx, len(ps))
 print(mx)
