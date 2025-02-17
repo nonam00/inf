@@ -1,5 +1,5 @@
 count = 0
-for line in open('11.txt'):
+for line in open('1.txt'):
     nums = [int(i) for i in line.split()]
     mn = min(nums)
     if nums.count(mn) == 1 and len(nums) != len(set(nums)):

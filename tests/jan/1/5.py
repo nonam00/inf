@@ -5,7 +5,7 @@ def f(N):
         bn = '10' + bn[2:]
     else:
         bn += '0'
-        bn = '11' + bn[2:]
+        bn = '11.py' + bn[2:]
     return int(bn, 2)
 
 print(max(f(N) for N in range(0, 16)))

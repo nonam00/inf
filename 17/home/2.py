@@ -1,7 +1,9 @@
-nums = [int(x) for x in open("2.txt")]
-mn = min(nums)
+nums = [int(s) for s in open('2.txt')]
+mx = max(i for i in nums if 10 <= i <= 99)
 arr = []
 for i in range(len(nums) - 1):
-    if nums[i] % 117 == mn or nums[i+1] % 117 == mn:
-        arr.append(nums[i] + nums[i+1])
+    if (10 <= nums[i] <= 99) + (10 <= nums[i + 1] <= 99) == 1:
+        sm = nums[i] + nums[i + 1]
+        if sm % mx == 0:
+            arr.append(sm)
 print(len(arr), max(arr))

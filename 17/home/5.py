@@ -1,9 +1,8 @@
-nums = [int(x) for x in open("5.txt")]
-mx = max(x for x in nums if 100 <= abs(x) <= 999)
+nums = [int(s) for s in open('5.txt')]
+mx = max([i for i in nums if i % 17 == 0])
 arr = []
 for i in range(len(nums) - 1):
-    if (100 <= abs(nums[i]) <= 999) + (100 <= abs(nums[i + 1]) <= 999) == 1:
-        summ = nums[i] + nums[i+1]
-        if summ < mx:
-            arr.append(summ)
+    sm = nums[i] + nums[i + 1]
+    if sm > mx:
+        arr.append(sm)
 print(len(arr), max(arr))

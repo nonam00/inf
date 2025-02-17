@@ -3,7 +3,7 @@ def f(N):
     if sum(int(i) for i in bn) % 4 == 0:
         bn += '10'
     else:
-        bn += '11'
+        bn += '11.py'
     if int(bn, 2) % 2 == 0:
         bn += '1'
     else:

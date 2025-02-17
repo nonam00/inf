@@ -7,7 +7,7 @@ def check(nums):
         prevd = tmp
     return True
 count = 0
-for line in open('12.txt'):
+for line in open('2.txt'):
     nums = [int(i) for i in line.split()]
     if len(nums) != len(set(nums)) or check(sorted(nums)):
         count += 1

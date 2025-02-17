@@ -1,4 +1,4 @@
-s = open('12.txt').readline()
+s = open('2.txt').readline()
 for i in range(0, 10):
     for j in range(0, 10):
         if (i % 2 == 0 and j % 2 != 0) or (i % 2 != 0 and j % 2 == 0):

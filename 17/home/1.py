@@ -1,8 +1,10 @@
-nums = [int(x) for x in open("1.txt")]
-mn = min(x for x in nums if (100 <= abs(x) <= 999) and (abs(x) % 10 == 3))
+nums = [int(s) for s in open('1.txt')]
+mx = max(abs(x) for x in nums if abs(x) % 1001 == 0)
 arr = []
+
 for i in range(len(nums) - 1):
-    if (1000 <= abs(nums[i]) <= 9999)+ (1000 <= abs(nums[i+1]) <= 9999) == 1:
-        if (nums[i] ** 2 + nums[i+1] ** 2) % mn == 0:
-            arr.append(nums[i] ** 2 + nums[i+1] ** 2)    
-print(len(arr), max(arr))
+    if 100 <= abs(nums[i]) <= 999 or 100 <= abs(nums[i + 1]) <= 999:
+        sm = nums[i] + nums[i + 1]
+        if sm > mx:
+            arr.append(sm)
+print(len(arr), min(arr))

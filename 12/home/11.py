@@ -1,8 +1,8 @@
 def f(s):
-    while '13' in s or '31' in s or '11' in s:
+    while '13' in s or '31' in s or '11.py' in s:
         s = s.replace('13', '4', 1)
         s = s.replace('31', '1', 1)
-        s = s.replace('11', '2', 1)
+        s = s.replace('11.py', '2', 1)
         s = s.replace('44', '1', 1)
 
     return sum(map(int, s))

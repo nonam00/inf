@@ -1,7 +1,7 @@
 def f(s):
-    while s.count('555') > 0 or s.count('11') > 0 or s.count('2'):
+    while s.count('555') > 0 or s.count('11.py') > 0 or s.count('2'):
         s = s.replace('555', '1', 1)
-        s = s.replace('11', '25', 1)
+        s = s.replace('11.py', '25', 1)
         s = s.replace('2', '5', 1)
     return int(s)
 
